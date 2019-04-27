@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Exports\AlarmasAutomatismoExport;
 use App\Exports\CausalesCierreExport;
 use App\Exports\ClAlarmasExport;
+use App\Exports\DataAtencionExport;
 use App\Exports\ExcelTmpExport;
 use App\Exports\IncidentesTareasExport;
 use App\Exports\IncidentExport;
@@ -71,7 +72,7 @@ class ExportController extends Controller
                 break;
             case 'data_atencion':
                 $fileName = 'Data Atencion-'.$fecha.'.xlsx';
-                (new Data($request->fecha))->store($fileName,'public');
+                (new DataAtencionExport($request->fecha))->store($fileName,'public');
                 break;
             default:
                 $fileName = '';
