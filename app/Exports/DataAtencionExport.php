@@ -4,9 +4,16 @@ namespace App\Exports;
 
 use App\Models\Incident;
 use App\Models\WorkOrder;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Contracts\Support\Responsable;
+use Maatwebsite\Excel\Concerns\Exportable;
 use Maatwebsite\Excel\Concerns\FromCollection;
+use Maatwebsite\Excel\Concerns\ShouldAutoSize;
+use Maatwebsite\Excel\Concerns\WithChunkReading;
+use Maatwebsite\Excel\Concerns\WithHeadings;
+use Maatwebsite\Excel\Concerns\WithMapping;
 
-class DataAtencionExport implements FromCollection,ShouldQueue,Responsable, WithHeadings,WithMapping,WithChunkReading,ShouldAutoSize
+class DataAtencionExport implements FromCollection,ShouldQueue,Responsable, WithHeadings,WithMapping,ShouldAutoSize
 {
     use Exportable;
     public function __construct($date)
@@ -46,5 +53,25 @@ class DataAtencionExport implements FromCollection,ShouldQueue,Responsable, With
 
         ];
     }
+    public function headings(): array
+    {
+        return [
+            'INCIDENTE',
+            'DESCRIPCION',
+            'RUTA CLASIFICACION',
+            'ESTADO',
+            'FECHA CREACION INCIDENTE',
+            'FECHA CIERRE INCIDENTE',
+            'GRUPO ASIGNADO',
+            'GRUPO PROPIETARIO',
+            'CREADO POR ',
+            'OT',
+            'FECHA CREACION',
+            'FECHA ESTADO',
+            'ESTADO',
+            'OT_WFM',
+            'GRUPO ASINADO' ,
 
+        ];
+    }
 }

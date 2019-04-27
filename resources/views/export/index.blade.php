@@ -61,6 +61,7 @@
                                         <option value="workinfo">WorkInfo</option>
                                         <option value="detallado">Historico Detallado</option>
                                         <option value="causales_cierre">Causales de Cierre</option>
+                                        <option value="data_atencion">Data Atencion</option>
                                     </select>
                                 </div>
                             </div>

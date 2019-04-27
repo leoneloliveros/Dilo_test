@@ -17,6 +17,7 @@ use App\Imports\ExcelTmpImport;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Maatwebsite\Excel\Facades\Excel;
+use Symfony\Component\VarDumper\Cloner\Data;
 
 class ExportController extends Controller
 {
@@ -67,6 +68,10 @@ class ExportController extends Controller
             case 'tareas_fo_performance':
                 $fileName = 'Tareas FO-PERFORMANCE-'.$fecha.'.xlsx';
                 (new TareaInFoExport($request->fecha))->store($fileName,'public');
+                break;
+            case 'data_atencion':
+                $fileName = 'Data Atencion-'.$fecha.'.xlsx';
+                (new Data($request->fecha))->store($fileName,'public');
                 break;
             default:
                 $fileName = '';
