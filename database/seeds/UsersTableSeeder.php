@@ -14,9 +14,9 @@ class UsersTableSeeder extends Seeder
     {
         DB::table('users')->insert([
             'name' => 'admin',
-            'email' => 'admin@admin.com',
+            'email' => 'admin2@admin.com',
             'username' => 'admin',
-            'cedula' => '1234',
+            'cedula' => '123456',
             'password' => bcrypt('password'),
         ]);
     }

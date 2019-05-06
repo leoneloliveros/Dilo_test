@@ -58,6 +58,12 @@
         <!-- /SECTION TITLE -->
 
         <!-- SECTION TILES -->
+        <div class="tile orange w2 h1 icon-featurecw">
+            <a class="link"  href="{{route('bitacoras.formulario_bitacoras')}}">
+                <i class="fa fa-file-word"></i>
+                <p class="title">BITACORAS </p>
+            </a>
+        </div>
 
         <div class="tile turquoise w1 h1 title-horizontalcenter icon-scaleuprotate360cw">
             <a class="link" href="{{route('export')}}">
@@ -77,17 +83,16 @@
                 <p class="title">DASHBOARD ENERGIA</p>
             </a>
         </div>
-        <div class="tile orange w2 h1 icon-featurecw">
-            <a href="#about" class="link">
-                <i class="fa fa-broadcast-tower"></i>
-                <p class="title">TORRE DE GESTION </p>
-            </a>
-        </div>
-
         <div class="tile blue title-verticalcenter icon-flip w2 h1">
             <a class="link" href="{{route('boTx.index')}}">
                 <i class="fa flaticon-network"></i>
                 <p class="title">BO-TXMW/SATEL</p>
+            </a>
+        </div>
+        <div class="tile orange w2 h1 icon-featurecw">
+            <a href="#about" class="link">
+                <i class="fa fa-broadcast-tower"></i>
+                <p class="title">TORRE DE GESTION </p>
             </a>
         </div>
 

@@ -34,6 +34,9 @@ Route::prefix('mesa-calidad')->group(function () {
 Route::prefix('gestor-combustible')->group(function () {
     Route::get('/estaciones-base','GestorConbustibleController@estacionesBase' )->name('gestor_combustible.estaciones_base');
 });
+Route::prefix('crear-bitacoras')->group(function () {
+    Route::get('/bitacora','BitacorasController@formulario' )->name('bitacoras.formulario_bitacoras');
+});
 
 
 Route::prefix('monitoreo-netcool')->group(function () {
