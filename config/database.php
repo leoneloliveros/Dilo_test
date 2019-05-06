@@ -80,8 +80,8 @@ return [
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
-        ],
-        'oracle' => [
+        ]
+        /* 'oracle' => [
             'driver' => 'oracle',
             'host' => env('DB_OC_HOST', 'localhost'),
             'port' => env('DB_OC_PORT', '1521'),
@@ -93,7 +93,7 @@ return [
             'prefix' => env('DB_OC_PREFIX', ''),
             'server_version' => env('DB_OC_SERVER_VERSION', '11g'),
         ]
-
+ */
     ],
 
     /*
