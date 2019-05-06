@@ -22,7 +22,6 @@ class CreateUsersTable extends Migration
             $table->string('username')->unique();
             $table->string('password');
             $table->dateTime('last_entry')->nullable();
-            $table->dateTime('phono')->default('user.png');
             $table->rememberToken();
             $table->timestamps();
         });
